@@ -126,6 +126,7 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+      enabled: false                  # 个股价/市值/排名 噪音过多，禁用
 
     # 自定义源示例
     # - id: "custom-feed"
