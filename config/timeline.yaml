@@ -463,18 +463,16 @@ custom:
       name: "中午速览"
       start: "12:00"
       end: "13:00"                 # 北京时间 12:00-13:00 推送一次
-      analyze: true                # 中午做 AI 分析（按兴趣过滤）
-      ai_mode: "daily"             # 汇总当天累积数据（深夜+早晨）
+      analyze: false               # 关掉 TrendRadar 的全天 AI 分析（我们自有 DeepSeek per-item 解读）
       push: true
-      report_mode: "daily"         # 当日全部新闻汇总
-      # once 继承 default（analyze: true, push: true）→ 窗口内只分析/推送一次
+      report_mode: "daily"
+      # once 继承 default（push: true）→ 窗口内只推送一次
 
     evening_brief:
       name: "傍晚汇总"
-      start: "18:00"
-      end: "19:00"                 # 北京时间 18:00-19:00 推送一次
-      analyze: true                # 晚间再做一次 AI 分析（含下午数据）
-      ai_mode: "daily"             # 汇总当天全部累积
+      start: "18:30"
+      end: "19:30"                 # 北京时间 18:30-19:30 推送一次
+      analyze: false               # 同上，关掉冗余分析
       push: true
       report_mode: "daily"
       # once 继承 default（analyze: true, push: true）→ 窗口内只分析/推送一次
